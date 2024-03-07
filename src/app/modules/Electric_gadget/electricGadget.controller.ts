@@ -117,7 +117,6 @@ export class ElectricGadgetController {
       res.json({ message: "Electric gadgets deleted successfully" });
     } catch (error) {
       console.error(error);
-      res.status(500).json({ message: "Internal Server Error" });
     }
   }
 }
