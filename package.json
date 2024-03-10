@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start:dev": "nodemon ./dist/app/server.js"
+    "start": "node ./dist/app/server.js"
   },
   "dependencies": {
     "@types/bcrypt": "^5.0.2",
