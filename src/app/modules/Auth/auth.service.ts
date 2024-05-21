@@ -16,11 +16,14 @@ export const loginUser = async (
     // Check if user exists and password is correct
     if (user && (await bcrypt.compare(password, user.password))) {
       // Create and sign a JWT token
-      const token = jwt.sign(
-        { username, role: user.role } as TAuthTokenPayload,
-        config.jwt_access_secret as string,
-        { expiresIn: "1h" }
-      );
+      const payload: TAuthTokenPayload = {
+        userId: user._id.toString(), // Ensure userId is a string
+        role: user.role,
+      };
+
+      const token = jwt.sign(payload, config.jwt_access_secret as string, {
+        expiresIn: "1h",
+      });
 
       return { token, user };
     } else {
@@ -31,7 +34,6 @@ export const loginUser = async (
     throw new Error(`Failed to login user: ${error.message}`);
   }
 };
-
 export const AuthServices = {
   loginUser,
 };

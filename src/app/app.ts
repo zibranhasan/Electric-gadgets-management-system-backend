@@ -7,6 +7,8 @@ import { UserRoutes } from "./modules/User/user.route";
 import { AuthRoutes } from "./modules/Auth/auth.route";
 import { ElectricGadgetRoutes } from "./modules/Electric_gadget/electricGadget.route";
 import { SaleRoutes } from "./modules/SalesDetails/saleDetails.route";
+import { OrderRoutes } from "./modules/Order/order.route";
+import { TransactionRoutes } from "./modules/Transaction/transaction.route";
 
 const app: Application = express();
 
@@ -33,5 +35,7 @@ app.use("/api/auth", UserRoutes);
 app.use("/api/auth", AuthRoutes);
 app.use("/api/gadgets", ElectricGadgetRoutes);
 app.use("/api/sales", SaleRoutes);
+app.use("/api/order", OrderRoutes);
+app.use("/api/transaction", TransactionRoutes);
 
 export default app;

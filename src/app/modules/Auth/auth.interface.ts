@@ -12,7 +12,7 @@ export type TRegisterUser = {
 };
 
 export type TAuthTokenPayload = {
-  username: string;
+  userId: string;
   role: string;
 };
 
@@ -22,6 +22,6 @@ export type TAuthResponse = {
 };
 export const USER_ROLE = {
   user: "user",
-  admin: "admin",
+  manager: "manager",
 } as const;
 export type TUserRole = keyof typeof USER_ROLE;

@@ -4,10 +4,14 @@ import auth from "../../middlewares/auth";
 
 const router = express.Router();
 
-router.post("/add", auth("user"), ElectricGadgetController.addElectricGadget);
+router.post(
+  "/add",
+  auth("manager"),
+  ElectricGadgetController.addElectricGadget
+);
 router.delete(
   "/:id",
-  auth("user"),
+  auth("manager"),
   ElectricGadgetController.deleteElectricGadget
 );
 router.put("/update/:id", ElectricGadgetController.updateElectricGadget);

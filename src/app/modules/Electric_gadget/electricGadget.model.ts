@@ -3,6 +3,7 @@ import { ElectricGadget, FilterOptions } from "./electricGadget.interface";
 
 const electricGadgetSchema = new mongoose.Schema({
   name: String,
+  photo: String,
   price: Number,
   quantity: Number,
   releaseDate: Date,

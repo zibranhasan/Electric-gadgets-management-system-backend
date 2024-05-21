@@ -1,6 +1,7 @@
 export interface ElectricGadget {
   _id: string;
   name: string;
+  photo: File | null;
   price: number;
   quantity: number;
   releaseDate: Date;
