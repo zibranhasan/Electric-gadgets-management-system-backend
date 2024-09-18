@@ -20,7 +20,7 @@ app.use(cookieParser()); // Use cookie-parser middleware
 // Enable CORS for all routes
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: "https://assignment-6-gilt-nine.vercel.app",
     credentials: true,
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
     allowedHeaders: ["Content-Type", "Authorization"],

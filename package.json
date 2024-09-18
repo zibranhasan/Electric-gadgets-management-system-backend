@@ -1,6 +1,7 @@
 {
   "scripts": {
     "start": "node ./dist/app/server.js",
+    "build": "tsc",
     "dev": "ts-node-dev --respawn --transpile-only src/app/server.ts"
   },
   "dependencies": {
